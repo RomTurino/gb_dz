@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import 'vars';
+@import 'functions';
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
+
+.center {
+    @include center(570px);
+}
+
+.main_color_used {
+    color: $mainColorSelect;
+}
+
+
+.header {
+    @include flex_between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background: $headerColor;
+
+    &_left {
+        @include flex_center;
+        gap: 41px;
+    }
+
+    &_right {
+        @include flex_center;
+        gap: 33px;
+    }
+}
+
+/* Начало блоко промо-материала */
+.promo {
+    @include flex_center;
+    @include center(800px);
+    justify-content: flex-start;
+    background: $promoColor;
+    gap: 43px;
+
+    & img {
+        width: 50%;
+    }
+
+    &_heading {
+        display: inline-block;
+        border-left: 12px solid $mainColorSelect;
+        padding-left: 16px;
+        margin-bottom: 90px;
+    }
+
+    & h1 {
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+        color: $headerColor;
+        margin: 0;
+    }
+
+    & h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38.4px;
+        color: $headerColor;
+    }
+}
+
+
+/* начало блока offer  */
+
+.offer {
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+
+    &_card {
+        position: relative;
+        background: $offerCardColor;
+        @include flex_center;
+
+        &_big {
+            grid-column: 1/span 3;
+        }
+
+        & img {
+            width: 100%;
+            position: inherit;
+            z-index: -1;
+        }
+
+        &_mobile {
+            display: none;
+        }
+
+        & h4 {
+            @include fontSizeRegular;
+            text-align: center;
+            position: absolute;
+            color: $offerTextColor;
+        }
+
+    }
+
+    &_heading {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+}
+
+
+
+
+/* Начало блока с текстом featured_items_header */
+
+
+.featured_items_header {
+    @include flex_column;
+    margin-top: 96px;
+
+    & h2 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        color: $headerColor;
+    }
+
+    & p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $featuredItemText;
+    }
+}
+
+
+/* Начало блока каталога товаров */
+
+.catalog {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px;
+
+    &_card {
+        background: $catalogCardBg;
+        padding-bottom: 19px;
+
+        & img {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        &_image {
+            width: 100%;
+            height: 420px;
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        &_button {
+            display: none;
+        }
+
+        &_heading {
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 16px;
+            margin-left: 16px;
+        }
+
+        &_text {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: $catalogCardTextColor;
+            margin-bottom: 16px;
+            margin-left: 16px;
+        }
+
+        &_price {
+            @include fontSizeRegular;
+            color: $mainColorSelect;
+            margin-left: 16px;
+        }
+    }
+}
+
+/* Кнопка просмотра всех товаров */
+
+.button_browse {
+    @include fontSizeRegular;
+    display: block;
+    margin: 48px auto 65px auto;
+    padding: 14px 28.5px;
+    color: $buttonTextColor;
+    background-color: $buttonBgColor;
+    border: 1px solid $buttonBorderColor;
+}
+
+input[type=checkbox] {
+    display: none;
+
+    &~label {
+        background: url("../images/square-caret-left-regular.svg");
+        height: 16px;
+        width: 16px;
+        display: inline-block;
+        padding: 0 0 0 0px;
+    }
+
+    &:checked~label {
+        background: url("../images/square-caret-right-regular.svg");
+    }
+}
+
+
+.advantages {
+    @include flex_center;
+    background-color: $darkColor;
+    gap: 30px;
+    padding: 104px 0;
+
+    &_tile {
+        @include flex_column;
+        max-width: 360px;
+
+        &_title {
+            color: $advantageColor;
+            font-size: 19.96px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 20px;
+        }
+
+        &_text {
+            color: $advantageColor;
+            text-align: center;
+            font-family: Lato;
+            font-size: 13.972px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-top: 16px;
+        }
+    }
+}
+
+
+
+
+
+.subscribe {
+    @include flex_between;
+    background: linear-gradient(0deg, rgba(244, 244, 244, 0.70), rgba(244, 244, 244, 0.70)), url("../images/subscribe_back.png");
+    background-size: cover;
+    min-height: 448px;
+
+    &_left {
+        @include flex_column;
+        gap: 30px;
+        max-width: 360px;
+
+        &_quote {
+            color: $darkColor;
+            text-align: center;
+            font-family: Lato;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &_right {
+        @include flex_column;
+        gap: 30px;
+
+        &_title {
+            color: $darkColor;
+            text-align: center;
+            font-family: Lato;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 167.2%;
+
+            &_main {
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+
+        &_form {
+            display: flex;
+
+            & input {
+                padding: 16px 22px;
+                color: $darkColor;
+                font-family: Lato;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                outline: none !important;
+                border: none !important;
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+            }
+
+            & button {
+                background-color: $mainColorSelect;
+                color: $offerTextColor;
+                text-align: center;
+                font-family: Lato;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding: 16px 22px;
+                border: none !important;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+        }
+    }
+}
+
+
+
+.footer {
+    @include flex_between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: $darkColor;
+
+    &_left p {
+        @include fontSizeRegular;
+        color: #FBFBFB;
+    }
+
+    &_right {
+        display: flex;
+        gap: 7px;
+
+        &_box {
+            background-color: $footerCardBg;
+            padding: 8px 11px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

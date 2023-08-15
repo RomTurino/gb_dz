@@ -1,0 +1,64 @@
+@media (max-width:1180px){
+    .center {
+        padding-left: calc(50% - 550px);
+        padding-right: calc(50% - 550px);
+    }
+}
+
+@media (max-width:1120px){
+    .center {
+        padding-left: calc(50% - 367px);
+        padding-right: calc(50% - 367px);
+    }
+    .promo h1 {
+        font-size: 44px;
+    }
+    .promo h2 {
+        font-size: 24px;
+    }
+    .offer{
+        grid-template-rows: 168px 116px;
+    }
+    .catalog{
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .advantages{
+        flex-direction: column;
+    }
+    .subscribe{
+        flex-direction: column;
+        max-height: 693px;
+        padding-top: 64px;
+        padding-bottom: 140px;
+    }
+}
+
+@media (max-width:768px){
+    .center {
+        padding-left: calc(50% - 171px);
+        padding-right: calc(50% - 171px);
+    }
+    .header_right_cart::after{
+        display: none;
+    }
+    .not_mobile{
+        display: none;
+    }
+    .promo{
+        padding:168px 0;
+    }
+    .offer{
+        display: flex;
+        flex-direction: column;
+    }
+    .offer_card_mobile{
+        display: block;
+    }
+    .catalog {
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+}
