@@ -38,6 +38,9 @@
         padding-left: calc(50% - 171px);
         padding-right: calc(50% - 171px);
     }
+    .header_right_cart::after{
+        display: none;
+    }
     .not_mobile{
         display: none;
     }

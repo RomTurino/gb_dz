@@ -175,12 +175,14 @@ header {
     margin-bottom: 25px;
 }
 .catalog_card_image{
+    width: 100%;
+    height: 420px;
     position: relative;
 }
 
 .catalog_card_button{
     display: none;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .catalog_card_heading {
