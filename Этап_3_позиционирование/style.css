@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+.pink_colored {
+    color: #F16D7F
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    background: #222222;
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 41px;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 33px;
+}
+
+
+
+/* Начало блоко промо-материала */
+.promo {
+    background: #F1E4E6;
+    display: flex;
+    align-items: center;
+    gap: 43px;
+    padding-left: 0;
+}
+
+.promo img {
+    width: 50%;
+}
+
+.promo_heading {
+    display: inline-block;
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
+    margin-bottom: 90px;
+}
+
+.promo h1 {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    color: #222222;
+    margin: 0;
+}
+
+.promo h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #222222;
+}
+
+/* начало блока offer  */
+
+.offer {
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+}
+
+.offer_card {
+    position: relative;
+    background: rgba(33, 22, 22, 0.7);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.big_card {
+    grid-column: 1/span 3;
+}
+
+.offer_card img {
+    width: 100%;
+    position: inherit;
+    z-index: -1;
+}
+
+.offer_card h4 {
+    position: absolute;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.offer_heading {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+}
+
+
+/* Начало блока с текстом featured_items_header */
+
+
+.featured_items_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 96px;
+}
+
+.featured_items_header h2 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #222222;
+}
+
+.featured_items_header p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9F9F9F;
+}
+
+/* Начало блока каталога товаров */
+
+.catalog {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    gap: 30px;
+}
+
+.catalog_card {
+    background: #F8F8F8;
+    padding-bottom: 19px;
+}
+
+.catalog_card img {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.catalog_card_heading {
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+
+.catalog_card_text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5D5D5D;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+
+.catalog_card_price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F16D7F;
+    margin-left: 16px;
+}
+
+
+/* Кнопка просмотра всех товаров */
+
+.button_browse {
+    display: block;
+    margin: 48px auto 65px auto;
+    padding: 14px 28.5px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #F26376;
+    background-color: #fff;
+    border: 1px solid #FF6A6A;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] ~ label{
+    background: url("../square-caret-left-regular.svg");
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+input[type=checkbox]:checked ~ label {
+    background: url("../square-caret-right-regular.svg");
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}

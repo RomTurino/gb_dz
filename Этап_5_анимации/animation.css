@@ -1,0 +1,59 @@
+.header_right_cart::after{
+    content: "5";
+    background-color: #F16D7F;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 4px 6px;
+    border-radius: 50px;
+    position: absolute;
+    top: -13px;
+}
+
+.header_right_cart {
+    position: relative;
+}
+
+header svg path:hover{
+    fill:#F16D7F
+}
+
+.catalog_card_image:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(58, 56, 56, 0.86);
+}
+.catalog_card_image:hover .catalog_card_button{
+    display: block;
+    padding: 14px 16px;
+    border: 1px solid #FFF;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    background: transparent;
+}
+
+.advantages_tile:hover{
+    filter: drop-shadow(1px 1px 15px #F16D7F);
+}
+.button_browse:hover{
+    background-color: #F16D7F;
+    color: #FFF;
+}
+.subscribe_right_form:hover{
+    transform: scale(1.02);
+}
+.subscribe_right_form button:hover{
+    filter: drop-shadow(9px 9px 9px #F16D7F);
+}
+
+.footer_right_box:hover{
+    background-color: #F16D7F;
+}
+.footer_right_box:hover svg path{
+    fill: #fff;
+}
